@@ -1,0 +1,7 @@
+node_modules/
+__pycache__/
+.pytest_cache/
+
+# Separate projects that live in this folder but not in this repository
+phc_hub/
+am-datasolution-site/
