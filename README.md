@@ -33,6 +33,13 @@ npm install
 npm run build               # or: npm run dev  (rebuild on save), then reload the page
 ```
 
+## Deploy (Render)
+
+`render.yaml` describes the service. In the Render dashboard choose **New → Blueprint**,
+connect this repository, and apply. Render installs `requirements.txt` and runs
+`shiny run app.py --host 0.0.0.0 --port $PORT`. On the free plan the service sleeps after
+15 minutes without traffic, so the first visit after a pause takes about a minute.
+
 ## Layout
 
 ```

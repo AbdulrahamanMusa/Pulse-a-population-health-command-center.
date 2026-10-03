@@ -1,0 +1,13 @@
+# Render Blueprint: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: pulse-health
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # Render routes traffic to $PORT; bind to all interfaces.
+    startCommand: shiny run app.py --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
